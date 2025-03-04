@@ -11,3 +11,11 @@ jobs:
       - run: npm install && npm install -g @lhci/cli@0.14.x
       - run: npm run build
       - run: lhci autorun
+      - name: Debug Info
+        run: |
+          echo "Node version:"
+          node -v
+          echo "NPM version:"
+          npm -v
+          echo "Installed packages:"
+          npm list
